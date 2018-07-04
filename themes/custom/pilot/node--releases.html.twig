@@ -1,0 +1,58 @@
+<div class="bandcamp">
+    {{ content.field_bandcamp_iframe }}
+</div>
+
+<div class="release-description">
+    {{content.body}}
+</div>
+
+{{kint(content.field_show_cover['#items'].getValue())}}
+
+{{ content.field_artist['#items'].getValue()|last.value}}
+
+{% for artist in content.field_artist['#items'].getValue() %}
+  {{artist.value}}
+{% endfor %}
+
+ {% if content.field_show_cover['#items'].getValue()|first.value == "1" %}
+    <div class="cover">
+        {{content.field_cover}}
+    </div>
+{% else %}
+    <h3>I don't want you to see the front cover</h3>
+{% endif %}
+
+<br><br>
+
+<div class="bodyextra">
+        {{content.field_bodyextra}}
+</div>
+
+<div class="category">
+        {{content.field_published_date}}
+</div>
+<br>
+<div class="category">
+        {{content.field_category}}
+</div>
+
+
+<!--<div class="artist">
+    {{content.field_artists}}
+</div>
+
+<br><br>
+
+<div class="name">
+    {{content.field_name}}
+</div>
+
+<br><br>
+
+<div class="reviews">
+    {{content.field_reviews}}
+</div>-->
+
+
+
+

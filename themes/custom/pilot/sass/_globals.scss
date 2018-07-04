@@ -1,0 +1,322 @@
+$susy:(
+    container-position: center,
+    last-flow: to,
+    columns: 12,
+    gutters: 1/4,
+    gutter-position: inside,
+);
+
+/* =======================================================================
+## ++ Globals
+========================================================================== */
+html{
+    font-size: 100%;
+}
+
+
+body{
+    -webkit-font-smoothing: antialiased;
+    background:#FFFFFF;
+    font-family:sans-serif;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.container{
+    @include container(83%);
+}
+
+.layout-content{
+    //background-color: beige;
+    width:100%;
+}
+
+.artist, .name {
+    strong {
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
+
+p {
+    line-height: 1.3;
+    }
+
+// particularly for podcasts view?
+// mobile and desktop displays for text in views
+// 
+// mobile views
+@media only screen and (max-width: 700px) {
+.views-field-body p {
+    //background-color: floralwhite;
+    padding-left: 5px;
+    padding-right: 5px;
+    }
+}
+    
+// desktop views
+@media only screen and (min-width: 700px) {
+.views-field-body {
+    //background-color: floralwhite;
+    padding-left: 60px;
+    padding-right: 60px;
+    }
+}
+
+
+.views-field-title {
+    color:#464646;
+    
+}
+
+.views-row {
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+// Paragraphs?
+.paragraph--view-mode--default {
+    background-color: aqua;
+    //border-width: 5px;
+    //border-style: dotted;
+}
+
+.release-description {
+        padding:10px;
+        }       
+// main-navigation
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+    color: #676BFB;
+    /*padding: 0 7px;*/
+   
+    &:hover {
+        text-decoration: underline;
+        color:black;
+    }
+}
+
+.main-navigation li {
+    float: left;
+    position:relative;
+    display:inline;
+}
+
+@media screen and (max-width: 700px) {
+  .main-navigation ul li a {
+    float: none;
+    display: block;
+    text-align: left;
+    //background-color:bisque;
+  }
+}
+
+
+/*.main-navigation ul ul {
+    position:absolute;
+    width:200px;
+    background-color: blanchedalmond;
+    display:none;
+    
+    li {
+        float:none;
+        list-style: none;
+        
+        a{
+            color:black;
+            display:block;
+            padding:5px;
+            border-bottom: 1px solid #efefef;
+            
+            &:hover {
+                background: black;
+                color:#fff;
+            }
+        }
+    }
+}*/
+
+/*.main-navigation {
+    @include span(10 first);
+}*/
+
+#block-pilot-main-menu-menu h2 { 
+        border-bottom: 6px dotted #FB1537;
+}
+
+// Monthly releases paragraph title
+.monthly-title {
+    
+}
+
+// Monthly releases paragraph link below big cover image
+.monthly-link {
+    padding: 15px;   
+    a {
+        color:#000000;
+        &:hover {
+        text-decoration: underline;
+        }
+        
+      }
+}
+    
+/*.visually-hidden {
+    h2 {
+        border-bottom: 6px dotted #FB1537;
+    }
+}*/
+
+
+// MONTHLY NAVIGATION
+.monthly-navigation a {
+    display: block;
+    text-decoration: none;
+    color: #676BFB;
+    /*padding: 0 7px;*/
+   
+    &:hover {
+        text-decoration: underline;
+        color:black;
+    }
+}
+
+.monthly-navigation li {
+    float: left;
+    position:relative;
+    display:inline;
+}
+
+.monthly-navigation {
+    @include span(10 first);
+}
+
+/* -------------------------------------- */
+
+// copy of class in core - not needed here
+.contextual-region {
+ //background-color: aqua;
+  position: relative;
+ //height:30px;
+  
+}
+
+// display the admins links inline eg: view, edit, manage display etc.
+.local-task-links {
+    display:inline;
+}
+
+/* style for the label of the information field in podcasts content type only.
+If this class called .information then somehow matches to the field name and will apply styles to the whole field. But if use different name as have done here then will only apply styles to the label of the field - see field--node--field-information--podcasts.html.twig in /field folder */
+.info-label-only {
+    background-color: blue;
+}
+
+/*.title-class {
+    h2 {
+          margin-bottom: 1em;
+          font-size: 20px;
+          font-size: 2.0rem;
+          line-height: 1.3;
+          color:#6666FF;
+          border-bottom: 1px dotted #FB1537;
+    }
+}*/
+
+
+/*h1 {
+  margin-bottom: 0.75em;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.2;
+}
+h2 {
+  margin-bottom: 0.75em;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color:#6666FF;
+  border-bottom: 1px dotted #FB1537;
+}
+h3 {
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-size: 2.0rem;
+  line-height: 1.2;
+  color:#6666FF;
+  border-bottom: 1px dotted #FB1537;
+}
+h4 {
+  margin-bottom: 1em;
+  font-size: 18px;
+  font-size: 1.9rem;
+  line-height: 1.3;
+  color:#6666FF;
+  border-bottom: 1px dotted #FB1537;
+}
+h5 {
+  margin-bottom: 1.5em;
+  font-size: 16px;
+  font-size: 1.6rem;
+  border-bottom: 1px dotted #FB1537;
+}*/
+
+
+
+/*.article-list {
+    h3 {
+        font-size: 140%;
+        
+        a{
+            color:#464646;
+            text-decoration: none;            
+        }       
+    }
+    
+    p {
+        line-height: 1.5;
+    }
+    
+    .views-row {
+        margin: 40px 0;
+    }
+    
+}*/
+
+
+/* =======================================================================
+## ++ Cleafix
+========================================================================== */
+
+/* float clearing for IE6 */
+* html .clearfix{
+ height: 1%;
+ overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+ min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+ clear: both;
+ content: ".";
+ display: block;
+ height: 0;
+ visibility: hidden;
+ font-size: 0;
+}
+
+.clr{clear:both;}
+
+
+
+
+
+

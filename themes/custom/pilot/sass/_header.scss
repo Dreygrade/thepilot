@@ -1,0 +1,116 @@
+/*.main-header {
+    height:100px;
+    padding:10px;
+    background:url(../images/pilot_eleven_header.jpg) no-repeat center center;
+    max-width:100%;
+    background-size: 100% auto !important;
+}*/
+
+/* Resize Background
+@media only screen and (min-width: 800px) {
+
+    .main-header {
+            max-width: 83%;
+            height: 100px;
+            padding:10px;
+            background:url(../images/pilot_eleven_header.jpg) no-repeat center center;
+            background-size: 100% !important;
+    }
+}*/
+
+.main-header {
+    background-color: #43479E;
+    height:160px;
+    /*padding:10px;*/
+   /* img {
+        max-width:100%;        
+    }*/
+}
+
+// mobile and tablet
+@media only screen and (max-width: 700px) {
+    .main-header {
+    background-color: #43479E;
+    height:80px;
+    /*padding:10px;*/
+   /* img {
+        max-width:100%;        
+    }*/
+}
+.sitename {
+    a:link {
+    color:#FFFFFF;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 30px;
+    height: 55px;
+    line-height: 60px;
+    font-family: 'Roboto Mono', monospace;
+    //padding: 40px;
+        }
+    }
+.netlabel {
+        display: inline;
+        color:#000000;
+        margin-left: 15px;
+    }
+}
+ 
+// desktop
+@media only screen and (min-width: 700px) {
+    .main-header {
+    //background-color: #676BFB;
+    background-color: #43479E;
+    height:160px;
+    /*padding:10px;*/
+   /* img {
+        max-width:100%;        
+    }*/
+}
+    .sitename {
+        a:link {
+        color:#FFFFFF;
+        background-color: transparent;
+        text-decoration: none;
+        font-size: 50px;
+        height: 160px;
+        line-height: 160px;
+        font-family: 'Roboto Mono', monospace;
+        }
+    
+    }
+    .netlabel {
+        display: inline;
+        color:#000000;
+        margin-left: 40px;
+    }
+}
+    
+
+/*a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}*/
+
+
+.logo {
+    @include span(4);
+    
+    img {
+        max-width:100%;
+    }
+}
+

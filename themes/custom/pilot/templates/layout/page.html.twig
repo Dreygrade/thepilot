@@ -1,0 +1,31 @@
+{% include directory ~ '/partials/header.html.twig' %}
+
+<div class="container">
+    
+  <main role="main">
+      {% include directory ~ '/partials/main-navigation.html.twig' %} 
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      
+    {% include directory ~ '/partials/monthly-navigation.html.twig' %}
+        <br><br>
+      
+    <div class="layout-content">
+        <div class="article-list">
+        {{ page.content }}     
+        </div> 
+    </div>{# /.layout-content #}
+      
+
+   <!-- {% if page.sidebar %}
+      <aside class="layout-sidebar-first" role="complementary">
+          THE SIDEBAR
+        {{ page.sidebar }}
+      </aside>
+    {% endif %} -->
+
+
+  </main>
+
+</div>{# /.layout-container #}
+
+{% include directory ~ '/partials/footer.html.twig' %}

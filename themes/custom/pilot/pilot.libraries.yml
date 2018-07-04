@@ -1,0 +1,15 @@
+global-css:
+    css:
+        theme:
+            css/style.css: {}
+            
+global-js:
+    js:
+        js/main.js: {}
+    dependencies:
+        - core/jquery
+
+fonts:
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Roboto+Mono': {type: external}

@@ -1,0 +1,14 @@
+.main-footer {
+    background-color: #43479E;
+    padding: 40px 40px 40px 40px;
+    margin: 60px 0 0 0;
+}
+
+.container-footer{
+    @include container(100%);
+}
+
+p.footer-text {
+    padding: 40px;
+    color: #ffffff;
+}
