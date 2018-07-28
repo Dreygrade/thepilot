@@ -39,7 +39,9 @@ node_modules/*
 assets/sound/*.flac
 assets/sound/*.wav
 assets/sound/*.mp3
-assets/sound/originals/
+assets/sound/originals/*.flac
+assets/sound/originals/*.wav
+assets/sound/originals/*.mp3
 
 
 composer.json
