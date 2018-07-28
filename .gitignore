@@ -42,6 +42,8 @@ assets/sound/*.mp3
 assets/sound/originals/*.flac
 assets/sound/originals/*.wav
 assets/sound/originals/*.mp3
+assets/sound/originals/*.ogg
+
 
 
 composer.json
