@@ -34,11 +34,8 @@ node_modules/*
 # Ignore configuration files that may contain sensitive information.
 # */settings*.php
 
-*.sql
-node_modules/*
-assets/sound/*.flac
-assets/sound/*.wav
-assets/sound/*.mp3
+.sql
+
 
 composer.json
 composer.lock
