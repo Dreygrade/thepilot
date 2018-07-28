@@ -1,13 +1,16 @@
-var gulp = require('gulp');
+//var gulp = require('gulp');
 var livereload = require('gulp-livereload')
 var uglify = require('gulp-uglifyjs');
-var sass = require('gulp-sass');
+//var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
-
-
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    plumber = require('gulp-plumber'),
+    imageResize = require('gulp-image-resize'),
+    rename = require("gulp-rename");
 
 
 gulp.task('imagemin', function () {
@@ -18,6 +21,31 @@ gulp.task('imagemin', function () {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('./themes/custom/pilot/images'));
+});
+
+
+gulp.task("resize976", function () {
+  gulp.src("assets/images/releases/originals/*.{jpg,png}")
+    .pipe(imageResize({  
+      width : 976,
+      height : 976,
+      crop : true,
+      upscale : true
+    }))
+    .pipe(rename(function (path) { path.basename += "-976"; }))
+    .pipe(gulp.dest("assets/images/releases/resized"));
+});
+
+gulp.task("resize480", function () {
+  gulp.src("assets/images/releases/originals/*.{jpg,png}")
+    .pipe(imageResize({  
+      width : 480,
+      height : 480,
+      crop : true,
+      upscale : true
+    }))
+    .pipe(rename(function (path) { path.basename += "-480"; }))
+    .pipe(gulp.dest("assets/images/releases/resized"));
 });
 
 

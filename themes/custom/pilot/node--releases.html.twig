@@ -6,13 +6,13 @@
     {{content.body}}
 </div>
 
-{{kint(content.field_show_cover['#items'].getValue())}}
+<!--{{kint(content.field_show_cover['#items'].getValue())}}
 
 {{ content.field_artist['#items'].getValue()|last.value}}
 
 {% for artist in content.field_artist['#items'].getValue() %}
   {{artist.value}}
-{% endfor %}
+{% endfor %}-->
 
  {% if content.field_show_cover['#items'].getValue()|first.value == "1" %}
     <div class="cover">
