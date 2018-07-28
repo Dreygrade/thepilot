@@ -32,6 +32,10 @@ sites/simpletest
 # */settings*.php
 
 *.sql
+node_modules/*
+assets/sound/*.flac
+assets/sound/*.wav
+assets/sound/*.mp3
 
 composer.json
 composer.lock
