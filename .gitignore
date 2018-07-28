@@ -39,6 +39,8 @@ node_modules/*
 assets/sound/*.flac
 assets/sound/*.wav
 assets/sound/*.mp3
+assets/sound/originals/
+
 
 composer.json
 composer.lock
